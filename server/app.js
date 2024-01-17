@@ -11,7 +11,7 @@ app.use(cors())
 // Middleware para parsear el cuerpo de la solicitud como JSON
 app.use(bodyParser.json())
 
-// Conexión a la base de datos MongoDB
+// Conexión a la base de datos MongoDB (1)
 const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
