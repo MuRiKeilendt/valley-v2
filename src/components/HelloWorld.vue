@@ -33,7 +33,7 @@
         </v-col>
       </v-row>
 
-      <v-row :key="this.primaryKey">
+      <v-row :key="primaryKey">
         <v-col v-for="(item) of this.names " :key="item._id" :cols="columnSizes">
           <v-card :class="{ 'win-card': win, 'tie-card': tie }" width="500px" class="mx-auto">
             <v-card-title>
