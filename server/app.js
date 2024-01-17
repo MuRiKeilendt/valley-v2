@@ -42,6 +42,7 @@ app.get('/api/data/:collection', async (req, res) => {
         const collectionName = req.params.collection
         const collection = getCollection(collectionName)
         const result = await collection.find().toArray()
+        res.setHeader('Content-Type', 'application/json'); // Configura el tipo de contenido
         res.json(result)
     } catch (error) {
         console.error('Error al obtener datos de MongoDB:', error)
