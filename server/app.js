@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const { MongoClient } = require('mongodb')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || /* 3000 */ 80
 
 // Habilita CORS para todas las rutas
 app.use(cors())
@@ -84,6 +84,6 @@ app.post('/api/reset-databases', async (req, res) => {
 })
 
 
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, () => {
     console.log(`Servidor Node.js escuchando`)
 })
