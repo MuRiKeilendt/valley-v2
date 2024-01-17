@@ -8,12 +8,11 @@ const port = process.env.PORT || 3000
 // Habilita CORS para todas las rutas
 app.use(cors())
 
-
 // Middleware para parsear el cuerpo de la solicitud como JSON
 app.use(bodyParser.json())
 
 // Conexión a la base de datos MongoDB
-const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 client.connect(err => {
