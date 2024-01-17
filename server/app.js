@@ -11,10 +11,9 @@ app.use(cors())
 // Middleware para parsear el cuerpo de la solicitud como JSON
 app.use(bodyParser.json())
 
-// Conexión a la base de datos
-const uri2 = process.env.MONGODB_URI || 'mongodb://localhost:27017/valley';
-const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
-const client = new MongoClient(uri2, { useNewUrlParser: true, useUnifiedTopology: true })
+// Conexión a la base de datos MongoDB
+const uri = process.env.MONGODB_URI || 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 client.connect(err => {
     if (err) {
@@ -75,7 +74,6 @@ app.post('/api/reset-databases', async (req, res) => {
 
         res.status(200).json({
             message: 'Bases de datos reiniciadas correctamente',
-            deletedUsersCount: deleteUserResult.deletedCount,
             deletedVotesCount: deleteVoteResult.deletedCount,
         })
     } catch (error) {
