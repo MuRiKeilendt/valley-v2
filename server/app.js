@@ -6,10 +6,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 // Habilita CORS para todas las rutas
-const corsOptions = {
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-}
-app.use(cors(corsOptions))
+app.use(cors())
 
 
 // Middleware para parsear el cuerpo de la solicitud como JSON
