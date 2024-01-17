@@ -4,7 +4,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        /* target: 'http://localhost:3000', */
+        target: 'valley-v2-s5plq7a1s-murikeilendts-projects.vercel.app',
         ws: true,
         changeOrigin: true
       }
