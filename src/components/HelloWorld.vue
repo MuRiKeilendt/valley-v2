@@ -266,7 +266,7 @@ export default {
       if (votante.comentario)
 
         try {
-          const response = await fetch(`http://netlify.app/api/data/${collectionName}`, {
+          const response = await fetch(`/api/data/${collectionName}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ export default {
       this.overlay = true
       this.loadReset = true
       try {
-        const response = await fetch('http://netlify.app/api/reset-databases', {
+        const response = await fetch('/api/reset-databases', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -338,9 +338,10 @@ export default {
     },
 
     async fetchData(collectionName) {
+      //Intento de obtener datos
       try {
         this.loading = true
-        const response = await fetch(`http://netlify.app/api/data/${collectionName}`)
+        const response = await fetch(`/api/data/${collectionName}`)
         const data = await response.json()
 
 
