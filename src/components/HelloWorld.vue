@@ -48,7 +48,7 @@
             <v-card-text>
 
               <img class="mx-3 my-3"
-                :src="item.nombre == 'David Larousse' ? 'https://mail.google.com/mail/u/0?ui=2&ik=4d761c0211&attid=0.3&permmsgid=msg-f:1788187660438129899&th=18d0eb33f426cceb&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_P5xLoWnDluO83td60QwQ3fFdZ6vUP7aNk6B4r6VvhxNlqS8KGTJGwJuj-3fqaui-mA7Tia8Gc00rHYnon98yrTWj4fzy0m2fdHvGEj1yiHOarwJpIxe1I-GE&disp=emb' : 'https://mail.google.com/mail/u/0?ui=2&ik=4d761c0211&attid=0.2&permmsgid=msg-f:1788187660438129899&th=18d0eb33f426cceb&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_NMgZ5hRfg5bWfF8gLiATYfSg-Gv5TG-Mkvc49gEoAwTFfSAQ54JasZff2xjw_ORCQZiFBlr6swdEq4IdcaOtygxEfaUuFy-5WLewGatTrqRdFTPOsRkwICrg&disp=emb'"
+                :src="item.nombre == 'David Larousse' ? 'http://mail.google.com/mail/u/0?ui=2&ik=4d761c0211&attid=0.3&permmsgid=msg-f:1788187660438129899&th=18d0eb33f426cceb&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_P5xLoWnDluO83td60QwQ3fFdZ6vUP7aNk6B4r6VvhxNlqS8KGTJGwJuj-3fqaui-mA7Tia8Gc00rHYnon98yrTWj4fzy0m2fdHvGEj1yiHOarwJpIxe1I-GE&disp=emb' : 'https://mail.google.com/mail/u/0?ui=2&ik=4d761c0211&attid=0.2&permmsgid=msg-f:1788187660438129899&th=18d0eb33f426cceb&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ_NMgZ5hRfg5bWfF8gLiATYfSg-Gv5TG-Mkvc49gEoAwTFfSAQ54JasZff2xjw_ORCQZiFBlr6swdEq4IdcaOtygxEfaUuFy-5WLewGatTrqRdFTPOsRkwICrg&disp=emb'"
                 height="400px" width="300px">
 
               <div class="mx-3 my-3">
@@ -266,7 +266,7 @@ export default {
       if (votante.comentario)
 
         try {
-          const response = await fetch(`https://localhost:3000/api/data/${collectionName}`, {
+          const response = await fetch(`http://localhost:3000/api/data/${collectionName}`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ export default {
       this.overlay = true
       this.loadReset = true
       try {
-        const response = await fetch('https://localhost:3000/api/reset-databases', {
+        const response = await fetch('http://localhost:3000/api/reset-databases', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -341,7 +341,7 @@ export default {
       //Intento de obtener datos
       try {
         this.loading = true
-        const response = await fetch(`https://localhost:3000/api/data/${collectionName}`, {
+        const response = await fetch(`http://localhost:3000/api/data/${collectionName}`, {
           method: 'GET', headers: { 'Content-Type': 'application/json' }
         })
         const data = await response.json()
