@@ -336,7 +336,7 @@ export default {
 
     async fetchData(collectionName) {
       //Intento de obtener datos
-      const apiUrl = `/api/data/${collectionName}`
+      const apiUrl = `http://localhost:8080/api/data/${collectionName}`
       console.log(apiUrl)
       try {
         this.loading = true
