@@ -341,7 +341,7 @@ export default {
       //Intento de obtener datos
       try {
         this.loading = true
-        const response = await fetch(`https://valley-dojo.netlify.app/api/data/${collectionName}`, { mode: 'no-cors', headers: { 'Content-Type': 'application/json' } })
+        const response = await fetch(`https://valley-dojo.netlify.app/api/data/${collectionName}`, { method: 'GET', headers: { 'Content-Type': 'application/json' } })
         const data = await response.json()
 
 
