@@ -336,9 +336,11 @@ export default {
 
     async fetchData(collectionName) {
       //Intento de obtener datos
+      const apiUrl = `/api/data/${collectionName}`
+      console.log(apiUrl)
       try {
         this.loading = true
-        const response = await fetch(`/api/data/${collectionName}`, {
+        const response = await fetch(apiUrl, {
           method: 'GET'
         })
         const data = await response.json()
