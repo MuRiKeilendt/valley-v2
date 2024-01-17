@@ -18,7 +18,7 @@ app.use(cors(corsOptions))
 app.use(bodyParser.json())
 
 // Conexión a la base de datos MongoDB
-const uri = process.env.MONGODB_URI || 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
+const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 client.connect(err => {
