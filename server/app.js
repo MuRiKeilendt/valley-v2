@@ -5,16 +5,13 @@ const { MongoClient } = require('mongodb')
 const app = express()
 const port = process.env.PORT || 3000
 
-// Habilita CORS para todas las rutas
-/* app.use(cors()) */
+const corsOptions = {
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    optionsSuccessStatus: 204,
+};
 
-// Antes de las rutas
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-});
+// Habilita CORS para todas las rutas
+app.use(cors(corsOptions))
 
 
 // Middleware para parsear el cuerpo de la solicitud como JSON
