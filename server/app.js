@@ -13,8 +13,8 @@ app.use(cors())
 app.use(bodyParser.json())
 
 // Conexión a la base de datos MongoDB
-const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/?retryWrites=true&w=majority'
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: { version: 'ServerApiVersion.v1', strict: true, deprecationErrors: true, } })
 
 client.connect(err => {
     if (err) {
