@@ -342,7 +342,7 @@ export default {
         this.loading = true
         const response = await fetch(apiUrl, {
           method: 'GET',
-          mode: 'cors',
+          mode: 'no-cors',
         })
         const data = await response.json()
 
