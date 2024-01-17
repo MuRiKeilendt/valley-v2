@@ -316,10 +316,7 @@ export default {
       this.loadReset = true
       try {
         const response = await fetch('/api/reset-databases', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          method: 'POST'
         })
 
         const data = await response.json()
@@ -342,7 +339,7 @@ export default {
       try {
         this.loading = true
         const response = await fetch(`/api/data/${collectionName}`, {
-          method: 'GET', headers: { 'Content-Type': 'application/json' }
+          method: 'GET'
         })
         const data = await response.json()
 

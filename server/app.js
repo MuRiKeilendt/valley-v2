@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const { MongoClient } = require('mongodb')
 const app = express()
-const port = process.env.PORT || /* 3000 */ 80
+const port = process.env.PORT || 3000
 
 // Habilita CORS para todas las rutas
 app.use(cors())
