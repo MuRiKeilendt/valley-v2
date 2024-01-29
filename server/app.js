@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const { MongoClient } = require('mongodb')
+const { MongoClient, ServerApiVersion } = require('mongodb')
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -12,8 +12,14 @@ app.use(cors())
 app.use(bodyParser.json())
 
 // Conexión a la base de datos MongoDB (1)
-const uri = 'mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/'
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+const uri = "mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/"
+const client = new MongoClient(uri, {
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
+    }
+});
 
 client.connect(err => {
     if (err) {
