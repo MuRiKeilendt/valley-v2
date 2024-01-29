@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "serve": "yarn serve",
-    "build": "yarn build",
-    "lint": "yarn lint"
+    "serve": "yarn serve"
   },
   "dependencies": {
     "@types/moment": "^2.13.0",
