@@ -14,11 +14,11 @@ app.use(bodyParser.json())
 // Conexión a la base de datos MongoDB (1)
 const uri = "mongodb+srv://keilendtmauricio:yqoyeQ2m7cDVxgAm@nullvalley.qpzxjad.mongodb.net/"
 const client = new MongoClient(uri, {
-    serverApi: {
+/*     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
         deprecationErrors: true,
-    }
+    } */
 });
 
 client.connect(err => {

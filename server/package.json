@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "yarn serve",
+    "build": "yarn build",
+    "lint": "yarn lint"
   },
   "keywords": [],
   "author": "",

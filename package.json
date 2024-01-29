@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "yarn serve",
+    "build": "yarn build",
+    "lint": "yarn lint"
   },
   "dependencies": {
     "@types/moment": "^2.13.0",
